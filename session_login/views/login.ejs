@@ -1,0 +1,21 @@
+<div>
+    <%= err %>
+    <form className="container" method="post" action="/">
+
+        <div class="mb-3">
+            <label for="title" class="form-label">Email</label>
+            <input type="hidden" class="form-control"  name="csrf" value="<%= %>"/>
+            </div>
+<div class="mb-3">
+<label for="title" class="form-label">Email</label>
+<input type="text" class="form-control" id="Email" name="Email" />
+
+</div>
+<div class="mb-3">
+<label for="des" class="form-label">Password</label>
+<input type="text" class="form-control" id="Password" name="Password" ></input>
+</div>
+
+<button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>

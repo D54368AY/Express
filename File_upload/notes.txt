@@ -1,0 +1,23 @@
+--> Multi file upload 
+<input type="file" name="multiple_images" multiple />
+
+let upload=multer({storage:storage,fileFilter:helpers.imageFilter}).array('multiple_images',10);
+
+  upload(req,res,(err)=>{
+      if(req.fileValidationError){
+
+      }
+      else if(!req.file){
+
+      }
+      else if(err){
+
+      }
+      else {
+          const files=req.files;
+          for(index=0; len=files.length; index<len; ++index){
+              result+=`<img src="${files[index].filename}" width=300 height=300/>`;
+          }
+          res.send(result);
+      }
+  })
